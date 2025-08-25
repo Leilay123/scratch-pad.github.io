@@ -26,8 +26,14 @@ E:
 */
 function reverseString(input) {
   // YOUR CODE BELOW HERE //
-//create a var for storing the reverse string
+//create a var for storing the reverse string\
+var reversedInput = "";
 // create a loop to go through the string and reverse it (yuck)
+for (let i = input.length - 1; i >= 0; i--){
+  //store that reversed string into the placeholder var
+   reversedInput += input[i];
+}
+return reversedInput
   // YOUR CODE ABOVE HERE //
 }
 
