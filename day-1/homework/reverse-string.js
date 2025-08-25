@@ -18,10 +18,16 @@
  *  c. how do you access individual characters of a String?
  *  d. how do you concatenate Strings? What operator do we use?
  */
-
+/*
+I:function should only take the string as a input
+O: Function should return the string revered in a new string
+C: Need a storage var to hold the reverse string, need a loop for reversing the string
+E: 
+*/
 function reverseString(input) {
   // YOUR CODE BELOW HERE //
-
+//create a var for storing the reverse string
+// create a loop to go through the string and reverse it (yuck)
   // YOUR CODE ABOVE HERE //
 }
 
