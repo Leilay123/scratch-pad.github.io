@@ -200,13 +200,12 @@ C: Function should store the joined strings into an array called "args"
 E:
 */
 function join(stringOne, stringTwo) {
-  // YOUR CODE BELOW HERE //
-  var args = Array.from(arguments);
-// should join the strings together
-var joinedStrings = stringOne.concat(stringTwo)
-// store the joined strings in into the arg array
-args = joinedStrings
-  // YOUR CODE ABOVE HERE //
+   // YOUR CODE BELOW HERE //
+   var args = Array.from(arguments);
+   // should join the strings together (should use .join)
+  Array.join(stringOne, stringTwo);
+   // store the joined strings in into the arg array
+     // YOUR CODE ABOVE HERE //
 }
 
 /**
