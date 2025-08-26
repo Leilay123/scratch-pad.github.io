@@ -203,7 +203,7 @@ function join(stringOne, stringTwo) {
    // YOUR CODE BELOW HERE //
    var args = Array.from(arguments);
    // should join the strings together (should use .join)
-  Array.join(stringOne, stringTwo);
+  return args.join("")
    // store the joined strings in into the arg array
      // YOUR CODE ABOVE HERE //
 }
