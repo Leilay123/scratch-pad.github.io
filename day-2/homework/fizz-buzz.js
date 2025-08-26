@@ -10,9 +10,29 @@
  *  c. AND for the multiples of five print “Buzz”.
  *  d. FINALLY, for numbers which are multiples of both three and five print “FizzBuzz”.
  */
+
+/*
+if the number is a multiple of 3, log fizz, if multiple of 5, log buzz
+*/
 function fizzBuzz() {
  // YOUR CODE BELOW HERE //
+//loop 1 to 100
 
+for(var i = 1; i <= 100; i++){
+  //check number is a multiple of 3 and 5 first
+  if (i % 3 === 0 && i % 5 === 0){
+    console.log("FizzBuzz")
+  } //then check if's a multiple of 3
+  else if (i % 3 === 0){
+    console.log("Fizz")
+    //check if a multiple of 5
+  } else if (i % 5 === 0){
+    console.log("Buzz")
+    // else log the number
+  } else {
+    console.log(i);
+  }
+}
  // YOUR CODE ABOVE HERE //
 }
 
