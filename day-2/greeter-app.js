@@ -33,9 +33,26 @@
  *      the exact case.
  */
 
+/*
+I: Function have hour param
+O: If 0-11, return "good morning", if 12-16 return "good afterNoon", if hour is 17-21 return good evening, if 22-24, return good night
+C: use an if else statement, case sensitive
+E:
+*/
+
 function greeter(hour) {
   // YOUR CODE BELOW HERE //
-  
+    // create an if statement for the moring, if the hour is 0 - 11, should return with 'Good Morning!'
+    if (hour >= 0 && hour <= 11) {
+      return 'Good Morning!';
+    } else if (hour >= 12 && hour <= 16) {
+      return 'Good Afternoon!';
+    } else if (hour >= 17 && hour <= 21) {
+      return 'Good Evening!';
+    } else {
+      return 'Good Night!';
+    }
+      
   // YOUR CODE ABOVE HERE //
 }
 
