@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { result } = require("lodash");
+
 /**
  * 3: range()
  *
@@ -21,9 +23,31 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
+
+// Notes: return an array that have all the inters between the parameters
+// Notes: start > end , then reverse the numbers
+// push the numbers in an storage array
 function range(start, end) {
   // YOUR CODE BELOW HERE //
 
+//create an storage array
+var storageArray = [];
+
+//normal order
+
+if (start <= end){
+  for (let i = start; i <= end; i++){
+    storageArray.push(i);
+  }
+}
+// reversed order
+else {
+  for (let i = start; i >= end; i--){
+    storageArray.push(i);
+  }
+}
+
+return storageArray
   // YOUR CODE ABOVE HERE //
 }
 
