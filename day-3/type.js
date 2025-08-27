@@ -14,9 +14,11 @@
  *
  * HINT: There is a method that can help with this.
  */
+
+//I need an typeof that can deteman if somerhing is an array. Not typeof but .isarray
 function isArray(value) {
   // YOUR CODE BELOW HERE //
-
+return Array.isArray(value)
   // YOUR CODE ABOVE HERE //
 }
 
@@ -34,9 +36,11 @@ function isArray(value) {
  * isObject([1, 2, 3]); // false
  * 
  */
+
+//sense array.isarray() is speffically for arrays, is there something similar for objects? instanceof()?
 function isObject(value) {
   // YOUR CODE BELOW HERE //
-  
+  return typeof value === 'object' && value !== null && !Array.isArray(value) && !(value instanceof Date);
   // YOUR CODE ABOVE HERE //
 }
 
@@ -48,7 +52,13 @@ function isObject(value) {
  */
 function isCollection(value) {
   // YOUR CODE BELOW HERE //
-
+if (Array.isArray(value)){
+return true
+} else if (typeof value === 'object' && value !== null && !(value instanceof Date)){
+return true 
+} else {
+  return false
+}
   // YOUR CODE ABOVE HERE //
 }
 
@@ -71,10 +81,23 @@ function isCollection(value) {
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
  */
+
+// simple datas will return their info as a string already, the only ones that need speical checking are object, arrays, etc
 function typeOf(value) {
   // YOUR CODE BELOW HERE //
-  
-  // YOUR CODE ABOVE HERE //
+
+//if statements seem to make sense
+if (Array.isArray(value)){
+    return "array"
+} else if (value === null){
+    return "null"
+} else if (value instanceof Date){
+  return "date"
+}
+
+return typeof value;
+
+// YOUR CODE ABOVE HERE //
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
