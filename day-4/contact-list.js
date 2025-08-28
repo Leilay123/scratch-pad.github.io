@@ -70,11 +70,10 @@ E:
 */
 
     findContact: function findContact (fullName){
-      // var fullName = contacts.nameFirst + contacts.nameLast
         for (var i = 0; i < contacts.length; i++){
           // var fishFood = contacts[i]; // named it something so I don't confused them
             if (contacts[i].nameFirst + ' ' + contacts[i].nameLast === fullName){
-              return contactsObject;
+              return contacts[i];
             }
         } 
         return undefined;
