@@ -33,8 +33,18 @@
  *          new-line character added after it!
  */
 
+/* Leila notes :D
+fill in the factory function that return an object with all of the keys/value pairs
+*/
 function makeContact(id, nameFirst, nameLast) {
   // Solve this function first
+  var contactsObject = {};
+  //forgot to give it an object to return oops, add that above
+      return {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast
+      }
 }
 
 function makeContactList() {
@@ -47,7 +57,44 @@ function makeContactList() {
     // we implemented the length api for you //
     length: function(){
       return contacts.length;
-    },
+    }, //start here
+    addContact: function addContact (contant){
+      contacts.push(contacts)
+    }, // findContact(fullName) should take a full name string and returns the oject if it's in the list and return undifinded if t he name isn't in the list
+
+/* 
+I: function should called findContact and take a parameter (fullName) which is a string
+O: function should return the contacts object if the full name is found if not, return undefined
+C:
+E:
+*/
+
+    findContact: function findContact (fullName){
+      // var fullName = contacts.nameFirst + contacts.nameLast
+        for (var i = 0; i < contacts.length; i++){
+          // var fishFood = contacts[i]; // named it something so I don't confused them
+            if (contacts[i].nameFirst + ' ' + contacts[i].nameLast === fullName){
+              return contactsObject;
+            }
+        } 
+        return undefined;
+
+    }, // removeContact
+    removeContact: function (contact){
+       var index = contacts.indexOf(contact)
+        if (index !== -1){
+          contacts.splice(index, 1);
+        }
+    }, // printAllContactNames
+
+    printAllContactNames: function printAllContactNames(){
+      var names = [];
+      for (var i = 0; i < contacts.length; i++){
+        names.push(contacts[i].nameFirst + ' ' + contacts[i].nameLast)
+      }
+      return names.join('\n');
+    }
+
   }
 }
 
