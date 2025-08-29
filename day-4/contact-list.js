@@ -79,6 +79,7 @@ E:
         return undefined;
 
     }, // removeContact
+    
     removeContact: function (contact){
        var index = contacts.indexOf(contact)
         if (index !== -1){
