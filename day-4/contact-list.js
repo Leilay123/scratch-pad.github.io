@@ -58,8 +58,8 @@ function makeContactList() {
     length: function(){
       return contacts.length;
     }, //start here
-    addContact: function addContact (contant){
-      contacts.push(contacts)
+    addContact: function addContact (contact){
+      contacts.push(contact)
     }, // findContact(fullName) should take a full name string and returns the oject if it's in the list and return undifinded if t he name isn't in the list
 
 /* 
@@ -80,7 +80,7 @@ E:
 
     }, // removeContact
     
-    removeContact: function (contact){
+    removeContact: function removeContact (contact){
        var index = contacts.indexOf(contact)
         if (index !== -1){
           contacts.splice(index, 1);
